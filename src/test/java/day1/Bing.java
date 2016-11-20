@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Bing {
 
 	public static void main(String[] args) {
-		
+	System.out.println("This is to test git hub");
 //		Open the firefox browser
 		 FirefoxDriver driver = new FirefoxDriver();
 		// Launch the URL
