@@ -1,0 +1,61 @@
+Go to the link https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774 or search in google jdbc driver for sql server
+
+download the sqljdbc_4.2.6420.100_enu.tar.gz
+ Select the option extract here and you get the file as sqljdbc_4.2.6420.100_enu.tar
+ again perform Extract here and you the folder sqljdbc_4.2
+ 
+ Before proceeding download maven from google http://maven.apache.org/download.cgi
+apache-maven-3.3.9-bin.zip
+
+ 
+ Set the environmental variable> System variable for maven
+ Path : D:\Jim\Softwares\Maven\apache-maven-3.3.9\bin
+
+Go to the folder sqljdbc_4.2 go to sqljdbc_4.2\enu subfolder
+Copy the entire path for example : C:\Java\JDBC_Driver\sqljdbc_4.2\enu 
+
+Open command prompt
+enter cd C:\Java\JDBC_Driver\sqljdbc_4.2\enu
+
+then type the following command
+mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.2 -Dpackaging=jar
+
+Check if the build is success 
+
+if yes then go to the location C:\Users\(your name)\.m2\repository\com\microsoft\sqlserver\sqljdbc4\4.2
+open the pom file sqljdbc4-4.2.pom 
+copy the dependency as below 
+<groupId>com.microsoft.sqlserver</groupId>
+  <artifactId>sqljdbc4</artifactId>
+  <version>4.2</version>
+  paste it inside the tag called <dependency> like below
+  <dependency>
+	<groupId>com.microsoft.sqlserver</groupId>
+  <artifactId>sqljdbc4</artifactId>
+  <version>4.2</version>
+  </dependency>
+  
+  copy the same to the pom file
+  
+  Copy the sqljdbc_auth.dll  from the driver location C:\Java\JDBC_Driver\sqljdbc_4.2\enu\auth\x86 to your system jre/bin
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
